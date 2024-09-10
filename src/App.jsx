@@ -44,7 +44,7 @@ function App() {
         <br />
         TTER
       </h1>
-      <div className="grid place-items-center min-h-screen">
+      <div className="grid place-items-center ">
         <div className="bg-White rounded-2xl md:p-6 p-8 flex md:flex-row flex-col justify-between gap-6 shadow-lg">
           <div className="md:w-[50%]">
             <h4 className="text-Darkgrayishcyan uppercase pb-1">BILL</h4>
