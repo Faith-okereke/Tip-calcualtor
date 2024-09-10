@@ -45,7 +45,7 @@ function App() {
         TTER
       </h1>
       <div className="grid place-items-center ">
-        <div className="bg-White rounded-2xl md:p-6 p-8 flex md:flex-row flex-col justify-between gap-6">
+        <div className="bg-White rounded-2xl md:p-6 p-8 flex md:flex-row flex-col justify-between gap-6 shadow-lg">
           <div className="md:w-[50%]">
             <h4 className="text-Darkgrayishcyan uppercase pb-1">BILL</h4>
             <div className="flex items-center justify-normal relative">
@@ -127,7 +127,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="bg-Verydarkcyan p-6 rounded-xl flex flex-col gap-7 w-full">
+          <div className="bg-Verydarkcyan p-6 rounded-xl flex flex-col gap-7">
             <div className="flex justify-between items-center w-full gap-20">
               <div className="flex flex-col items-start">
                 <h5 className="text-White text-base text-nowrap">Tip Amount</h5>
