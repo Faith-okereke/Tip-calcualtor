@@ -70,25 +70,25 @@ function App() {
               </button>
               <button
                 onClick={()=>changeTipPercentage(10)}
-                className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan  md:w-24  text-White font-bold text-lg focus:bg-Strongcyan"
+                className={`rounded-lg px-4 py-2 mt-3  md:w-24  font-bold text-lg focus:bg-Strongcyan ${tipPercentage=== 10? `bg-Strongcyan text-black`: `bg-Verydarkcyan text-White`}`}
               >
                 10%
               </button>
               <button
                 onClick={()=>changeTipPercentage(15)}
-                className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan  md:w-24 text-White font-bold text-lg focus:bg-Strongcyan"
+                className={`rounded-lg px-4 py-2 mt-3  md:w-24  font-bold text-lg focus:bg-Strongcyan ${tipPercentage=== 15? `bg-Strongcyan text-black`: `bg-Verydarkcyan text-White`}`}
               >
                 15%
               </button>
               <button
                 onClick={()=>changeTipPercentage(25)}
-                className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan  md:w-24 text-White font-bold text-lg focus:bg-Strongcyan"
+                className={`rounded-lg px-4 py-2 mt-3  md:w-24  font-bold text-lg focus:bg-Strongcyan ${tipPercentage=== 25? `bg-Strongcyan text-black`: `bg-Verydarkcyan text-White`}`}
               >
                 25%
               </button>
               <button
                 onClick={()=>changeTipPercentage(50)}
-                className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan  md:w-24 text-White font-bold text-lg focus:bg-Strongcyan"
+                className={`rounded-lg px-4 py-2 mt-3  md:w-24  font-bold text-lg focus:bg-Strongcyan ${tipPercentage=== 50? `bg-Strongcyan text-black`: `bg-Verydarkcyan text-White`}`}
               >
                 50%
               </button>
@@ -127,7 +127,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="bg-Verydarkcyan p-6 rounded-xl flex flex-col gap-7">
+          <div className="bg-Verydarkcyan p-6 rounded-xl flex flex-col gap-7 w-full">
             <div className="flex justify-between items-center w-full gap-20">
               <div className="flex flex-col items-start">
                 <h5 className="text-White text-base text-nowrap">Tip Amount</h5>

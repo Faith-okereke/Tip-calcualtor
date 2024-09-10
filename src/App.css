@@ -2,6 +2,7 @@
 body {
   background-color: hsl(185, 41%, 84%);
   font-family: "Space Mono", monospace;
+  overflow-x: hidden;
 }
 .space-mono-regular {
   font-family: "Space Mono", monospace;
@@ -19,6 +20,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.activey{
+.activey {
   background-color: hsl(172, 67%, 45%);
 }
