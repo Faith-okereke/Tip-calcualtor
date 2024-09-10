@@ -13,7 +13,8 @@ function App() {
   };
 
   const perPersonBill = bill / numPeople;
-  const perPersonTip = numPeople > 0 ? twoDecimal(perPersonBill * 0.15) : 0;
+  const perPersonTip =
+    numPeople > 0 ? twoDecimal(perPersonBill * (tipPercentage / 100)) : 0;
   const perPersonTotal =
     numPeople > 0 ? twoDecimal(perPersonBill + perPersonTip) : 0;
   const handleChangetotalAmount = (e) => {
@@ -30,9 +31,10 @@ function App() {
   const resetBill = () => {
     setBill("");
     setNumPeople("");
+    setTipPercentage(0);
   };
-  const changeTipPercentage = () => {
-    alert("Okay Lets get started");
+  const changeTipPercentage = (percentage) => {
+    setTipPercentage(percentage);
   };
 
   return (
@@ -61,31 +63,31 @@ function App() {
             <h4 className="text-Darkgrayishcyan pb-2">Select Tip %</h4>
             <div className="grid gap-3 md:grid-cols-3 grid-cols-2">
               <button
-                onClick={changeTipPercentage}
-                className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan md:w-24 text-White font-bold text-lg focus:bg-Strongcyan"
+                onClick={()=>changeTipPercentage(5)}
+                className={`rounded-lg px-4 py-2 mt-3  md:w-24  font-bold text-lg focus:bg-Strongcyan ${tipPercentage=== 5? `bg-Strongcyan text-black`: `bg-Verydarkcyan text-White`}`}
               >
                 5%
               </button>
               <button
-                onClick={changeTipPercentage}
+                onClick={()=>changeTipPercentage(10)}
                 className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan  md:w-24  text-White font-bold text-lg focus:bg-Strongcyan"
               >
                 10%
               </button>
               <button
-                onClick={changeTipPercentage}
+                onClick={()=>changeTipPercentage(15)}
                 className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan  md:w-24 text-White font-bold text-lg focus:bg-Strongcyan"
               >
                 15%
               </button>
               <button
-                onClick={changeTipPercentage}
+                onClick={()=>changeTipPercentage(25)}
                 className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan  md:w-24 text-White font-bold text-lg focus:bg-Strongcyan"
               >
                 25%
               </button>
               <button
-                onClick={changeTipPercentage}
+                onClick={()=>changeTipPercentage(50)}
                 className="rounded-lg px-4 py-2 mt-3 bg-Verydarkcyan  md:w-24 text-White font-bold text-lg focus:bg-Strongcyan"
               >
                 50%
@@ -94,6 +96,7 @@ function App() {
                 className="rounded-lg px-4 py-2 mt-3 bg-Verylightgrayishcyan font-bold  md:w-24 placeholder:text-sm"
                 type="number"
                 placeholder="Custom"
+                onChange={(e) => changeTipPercentage(Number(e.target.value))}
               />
             </div>
             <div>
